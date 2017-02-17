@@ -8,6 +8,8 @@ $(document).ready(function() {
   var cSharpScore = 0;
   var userName = "";
 
+  var beginnerExperience = 0;
+
   $(".frontBackEndForm").submit(function(){
     event.preventDefault();
     userName = $("#userName").val();
@@ -27,7 +29,8 @@ $(document).ready(function() {
       javaScore = javaScore + 5;
       cSharpScore = cSharpScore + 5;
       $(".introQuestions").hide(700);
-      $(".backEndQuestions").show(1400);
+      $(".backEndQuestions").show();
+      $(".howMuchExperienceDiv").show(1400);
     } else {
       alert("Gotta pick one!");
       //fancy bit of code that makes stuff red or whatever
@@ -40,10 +43,32 @@ $(document).ready(function() {
     console.log("cssScore = " + cssScore);
   });
 
-
-  $(".muchExperienceForm").submit(function() {
+  $(".experienceHowMuchForm").submit(function() {
     event.preventDefault();
-    score = 0;
+
+    var noIsChecked = $("#noExperience").is(':checked');
+    var someIsChecked = $("#someExperience").is(':checked');
+    var muchIsChecked = $("#muchExperiece").is(':checked');
+
+
+
+    if (noIsChecked === true) {
+      $(".howMuchExperienceDiv").hide(1000);
+      $(".languagesDesireDiv").show(1000);
+    } else if (someIsChecked === true) {
+      $(".howMuchExperienceDiv").hide(1000);
+      $(".languagesExperienceDiv").show(1000);
+      beginnerExperience = 1;
+    } else if (muchIsChecked === true) {
+      $(".howMuchExperienceDiv").hide(1000);
+      $(".languagesExperienceDiv").show(1000);
+    }
+
+  });
+
+  $(".whatLanguageExperience").submit(function() {
+    event.preventDefault();
+
     var choices = ["rubyExperience", "phpExperience", "javaExperience", "cssExperience", "cSharpExperience", "htmlExperience", "javaScriptExperience", "swiftExperience", "sqlExperience"];
 
     choices.forEach(function(info) {
@@ -51,18 +76,12 @@ $(document).ready(function() {
       var value = $(userAnswer).val();
       var isChecked = $(userAnswer).is(':checked');
 
-      if (isChecked === true) {
+      if ((isChecked === true) && beginnerExperience === 0) {
         value = value - 5;
+      } else if ((isChecked ===true) && beginnerExperience === 1) {
+        value = value - 2;
       }
-    });
 
-    if (score <= 5 && score > 0) {
-      console.log("the score is " + score);
-      $(".neilTyson").show();
-    } else if (score > 5 && score <= 10) {
-      $(".carlSagan").show();
-    } else if (score > 10) {
-      $(".richardDawkins").show();
-    }
+    });
   });
 });

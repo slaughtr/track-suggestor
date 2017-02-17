@@ -50,28 +50,30 @@
       <!-- hidden until user picks front/back end -->
         <h2>Select things that apply to you</h2>
         <!-- <div class="col-md-6"> -->
+        <div class="howMuchExperienceDiv">
           <form class="experienceHowMuchForm">
           <div>
             <label>
-              <input id="noExperience" type="checkbox" name="noExperience" value="1">
+              <input id="noExperience" type="radio" name="noExperience" checked>
               I have no experience programming.
             </label>
           </div>
           <div>
             <label>
-              <input id="someExperience" type="checkbox" name="someExperience" value="2">
+              <input id="someExperience" type="radio" name="someExperience">
               I have dabbled in programming.
             </label>
           </div>
           <div>
             <label>
-              <input id="muchExperience" type="checkbox" name="muchExperience" value="3">
+              <input id="muchExperience" type="radio" name="muchExperience">
               I have a lot of experience programming, and know one or more languages.
             </label>
           </div>
+        <input type="submit" value="Submit">
         </form>
-
-        <div class="muchExperienceForm">
+      </div>
+        <div class="languagesExperienceDiv">
         <form class="whatLanguageExperience">
           <h3>What languages do you have experience with? Check all that apply:</h3>
             <div>
@@ -138,6 +140,54 @@
             </form>
           </div>
         </div>
+
+        <div class="languagesDesireDiv">
+        <form class="whatLanguageDesire">
+          <h3>What languages do you have experience with? Check all that apply:</h3>
+            <div>
+              <label>
+                <input id="rubyDesire" type="checkbox" name="rubyDesire" value="rubyScore">
+                Ruby/Rails
+              </label>
+            </div>
+            <div>
+              <label>
+                <input id="phpDesire" type="checkbox" name="phpDesire" value="phpScore">
+                PHP/Drupal
+              </label>
+            </div>
+            <div>
+              <label>
+                <input id="javaDesire" type="checkbox" name="javaDesire" value="javaScore">
+                Java/Android
+              </label>
+            </div>
+              <div>
+                <label>
+                  <input id="cssDesire" type="checkbox" name="cssDesire" value="cssScore">
+                  CSS/Design
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input id="cSharpDesire" type="checkbox" name="cSharpDesire" value="cSharpScore">
+                  C#/.NET
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input id="htmlDesire" type="checkbox" name="htmlDesire" value="cssScore">
+                  HTML
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input id="javaScriptDesire" type="checkbox" name="javaScriptDesire" value="cssScore">
+                  JavaScript
+                </label>
+              </div>
+
+
         <div class="frontEndPage">
           <h1>You should probably take the CSS/Design track!</h1>
           <p>But let's be sure...</p>

@@ -2,7 +2,7 @@ html {
   background-color: #dae2ef;
 }
 
-.backEndQuestions, .frontEndPage {
+.backEndQuestions, .frontEndPage, .languagesExperienceDiv, .howMuchExperienceDiv, .languagesDesireDiv {
   display: none;
 }
 
