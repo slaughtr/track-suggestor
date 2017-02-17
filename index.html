@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <title>Epicodus Track Suggestor</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="introQuestions">
+        <h1 id="introHeader">Let's find out about you</h1>
+        <form class="frontOrBackEnd">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>What's your name?</h3>
+            <input id="userName" type="text" name="userName">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            front end
+          </div>
+          <div class="col-md-6">
+            back end
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            ready to learn
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="row backEndQuestions"> <!-- hidden until user picks front/back end -->
+        <h2>Select things that apply to you</h2>
+        <div class="col-md-6">
+          <form class="formOne">
+          <div>
+            <label>
+              <input id="red" type="checkbox" name="favColor" value="1">
+              I like red
+            </label>
+          </div>
+          <div>
+            <label>
+              <input id="blue" type="checkbox" name="favColor" value="2">
+              I like blue
+            </label>
+          </div>
+          <div>
+            <label>
+              <input id="green" type="checkbox" name="favColor" value="3">
+              I like green
+            </label>
+          </div>
+            <div>
+              <label>
+                <input id="dog" type="checkbox" name="dogCat" value="1">
+                I like puppers
+              </label>
+            </div>
+            <div>
+              <label>
+                <input id="cat" type="checkbox" name="dogCat" value="2">
+                I like kittens
+              </label>
+            </div>
+            <div>
+              <label>
+                <input id="young" type="checkbox" name="ageRange" value="1">
+                I am 18-35 years old
+              </label>
+            </div>
+              <div>
+                <label>
+                  <input id="middleAge" type="checkbox" name="ageRange" value="2">
+                  I am 36-55 years old
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input id="old" type="checkbox" name="ageRange" value="3">
+                  I am just old
+                </label>
+              </div>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+      </div>
+    </div>
+
+    <script src='js/jquery-3.1.1.js'></script>
+    <script src='js/scripts.js'></script>
+  </body>
+</html>

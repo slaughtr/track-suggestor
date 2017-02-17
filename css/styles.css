@@ -1,0 +1,14 @@
+.backEndQuestions {
+  display: none;
+}
+
+#introHeader {
+  text-align: center;
+}
+
+.introQuestions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
