@@ -46,6 +46,7 @@
         </form>
       </div>
     </div>
+
       <div class="row backEndQuestions">
       <!-- hidden until user picks front/back end -->
         <h2>Select things that apply to you</h2>
@@ -54,19 +55,19 @@
           <form class="experienceHowMuchForm">
           <div>
             <label>
-              <input id="noExperience" type="radio" name="noExperience" checked>
+              <input id="noExperience" type="radio" data-toggle="radio" name="experience" checked>
               I have no experience programming.
             </label>
           </div>
           <div>
             <label>
-              <input id="someExperience" type="radio" name="someExperience">
+              <input id="someExperience" type="radio" data-toggle="radio" name="experience">
               I have dabbled in programming.
             </label>
           </div>
           <div>
             <label>
-              <input id="muchExperience" type="radio" name="muchExperience">
+              <input id="muchExperience" type="radio" data-toggle="radio" name="experience">
               I have a lot of experience programming, and know one or more languages.
             </label>
           </div>
@@ -136,14 +137,14 @@
                   JavaScript
                 </label>
               </div>
-              <input type="submit" value="Submit">
+              <input type="submit" name="submit" value="I'm familiar with these" id="submitLanguageExperience">
             </form>
           </div>
         </div>
 
         <div class="languagesDesireDiv">
         <form class="whatLanguageDesire">
-          <h3>What languages do you have experience with? Check all that apply:</h3>
+          <h3>What languages do you want to learn? Check all that apply:</h3>
             <div>
               <label>
                 <input id="rubyDesire" type="checkbox" name="rubyDesire" value="rubyScore">
@@ -186,7 +187,8 @@
                   JavaScript
                 </label>
               </div>
-
+            <input type="submit" name="submit" value="I want to learn these" id="submitLanguageDesire">
+            </form>
 
         <div class="frontEndPage">
           <h1>You should probably take the CSS/Design track!</h1>

@@ -1,13 +1,11 @@
+var rubyScore = 0; //have to declare these out here for the window[] function to work
+var phpScore = 0;
+var javaScore = 0;
+var cssScore = 0;
+var cSharpScore = 0;
+
 $(document).ready(function() {
-
-  // globals to keep score per track
-  var rubyScore = 0;
-  var phpScore = 0;
-  var javaScore = 0;
-  var cssScore = 0;
-  var cSharpScore = 0;
   var userName = "";
-
   var beginnerExperience = 0;
 
   $(".frontBackEndForm").submit(function(){
@@ -21,7 +19,7 @@ $(document).ready(function() {
       cssScore = cssScore + 10;
       $(".introQuestions").hide(700);
       $(".frontEndPage").slideDown(1400).delay(2000).slideUp(700, function(){
-      $(".backEndQuestions").show(1400);
+        $(".backEndQuestions").show(1400);
       });
     } else if (isBackChecked === true) {
       rubyScore = rubyScore + 5;
@@ -35,12 +33,6 @@ $(document).ready(function() {
       alert("Gotta pick one!");
       //fancy bit of code that makes stuff red or whatever
     }
-
-    console.log("rubyScore = " + rubyScore);
-    console.log("phpScore = " + phpScore);
-    console.log("javaScore = " + javaScore);
-    console.log("cSharpScore = " + cSharpScore);
-    console.log("cssScore = " + cssScore);
   });
 
   $(".experienceHowMuchForm").submit(function() {
@@ -48,9 +40,7 @@ $(document).ready(function() {
 
     var noIsChecked = $("#noExperience").is(':checked');
     var someIsChecked = $("#someExperience").is(':checked');
-    var muchIsChecked = $("#muchExperiece").is(':checked');
-
-
+    var muchIsChecked = $("#muchExperience").is(':checked');
 
     if (noIsChecked === true) {
       $(".howMuchExperienceDiv").hide(1000);
@@ -58,12 +48,13 @@ $(document).ready(function() {
     } else if (someIsChecked === true) {
       $(".howMuchExperienceDiv").hide(1000);
       $(".languagesExperienceDiv").show(1000);
-      beginnerExperience = 1;
+      beginnerExperience = beginnerExperience + 1;
     } else if (muchIsChecked === true) {
       $(".howMuchExperienceDiv").hide(1000);
       $(".languagesExperienceDiv").show(1000);
+    } else {
+      alert("Gotta pick something!");
     }
-
   });
 
   $(".whatLanguageExperience").submit(function() {
@@ -77,11 +68,28 @@ $(document).ready(function() {
       var isChecked = $(userAnswer).is(':checked');
 
       if ((isChecked === true) && beginnerExperience === 0) {
-        value = value - 5;
+        window[value] = window[value] - 5;
       } else if ((isChecked ===true) && beginnerExperience === 1) {
-        value = value - 2;
+        window[value] = window[value] - 2;
       }
+    });
+    $(".languagesExperienceDiv").hide(1000);
+    $(".languagesDesireDiv").show(1000);
+  });
 
+  $(".whatLanguageDesire").submit(function() {
+    event.preventDefault();
+
+    var choices = ["rubyDesire", "phpDesire", "javaDesire", "cssDesire", "cSharpDesire", "htmlDesire", "javaScriptDesire"];
+
+    choices.forEach(function(info) {
+      var userAnswer = ("#" + info).toString();
+      var value = $(userAnswer).val();
+      var isChecked = $(userAnswer).is(':checked');
+
+      if (isChecked === true) {
+        window[value] = window[value] + 7;
+      }
     });
   });
 });
