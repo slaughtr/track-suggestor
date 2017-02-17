@@ -2,13 +2,41 @@
   display: none;
 }
 
-#introHeader {
+#introHeader, #frontOrBackEnd {
   text-align: center;
 }
 
+#userNameHeaderRow, #userNameRow {
+  text-align: center;
+  width: 100%;
+}
 .introQuestions {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#frontEndButton, span#frontEndButton {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: blue;
+  border: 1px dashed lightblue;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  font-size: 25px;
+}
+
+#backEndButton, span#backEndButton {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: red;
+  border: 1px dashed pink;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  font-size: 25px;
 }

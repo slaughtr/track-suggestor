@@ -12,24 +12,29 @@
         <h1 id="introHeader">Let's find out about you</h1>
         <form class="frontOrBackEnd">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12" id="userNameHeaderRow">
             <h3>What's your name?</h3>
+          </div>
+        </div>
+        <div class="row" id="userNameRow">
+          <div class="col-md-12">
             <input id="userName" type="text" name="userName">
           </div>
         </div>
-        <div class="row">
+        <div class="row frontOrBackEndButtonsRow">
+          <h3 id="frontOrBackEnd">Do you fancy yourself an artist or a scientist?</h3>
           <div class="col-md-6">
-            front end
+            <button id="frontEndButton"><span>I like to make things pretty.</span></button>
           </div>
           <div class="col-md-6">
-            back end
+            <button id="backEndButton"><span>I like to break things.</span></button>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-12">
             ready to learn
           </div>
-        </div>
+        </div> -->
         </form>
       </div>
       <div class="row backEndQuestions"> <!-- hidden until user picks front/back end -->
