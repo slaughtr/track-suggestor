@@ -45,62 +45,102 @@
         </div>
         </form>
       </div>
+    </div>
       <div class="row backEndQuestions">
       <!-- hidden until user picks front/back end -->
         <h2>Select things that apply to you</h2>
-        <div class="col-md-6">
-          <form class="formOne">
+        <!-- <div class="col-md-6"> -->
+          <form class="experienceHowMuchForm">
           <div>
             <label>
-              <input id="red" type="checkbox" name="favColor" value="1">
-              I like red
+              <input id="noExperience" type="checkbox" name="noExperience" value="1">
+              I have no experience programming.
             </label>
           </div>
           <div>
             <label>
-              <input id="blue" type="checkbox" name="favColor" value="2">
-              I like blue
+              <input id="someExperience" type="checkbox" name="someExperience" value="2">
+              I have dabbled in programming.
             </label>
           </div>
           <div>
             <label>
-              <input id="green" type="checkbox" name="favColor" value="3">
-              I like green
+              <input id="muchExperience" type="checkbox" name="muchExperience" value="3">
+              I have a lot of experience programming, and know one or more languages.
             </label>
           </div>
+        </form>
+
+        <div class="muchExperienceForm">
+        <form class="whatLanguageExperience">
+          <h3>What languages do you have experience with? Check all that apply:</h3>
             <div>
               <label>
-                <input id="dog" type="checkbox" name="dogCat" value="1">
-                I like puppers
+                <input id="rubyExperience" type="checkbox" name="rubyExperience" value="rubyScore">
+                Ruby/Rails
               </label>
             </div>
             <div>
               <label>
-                <input id="cat" type="checkbox" name="dogCat" value="2">
-                I like kittens
+                <input id="phpExperience" type="checkbox" name="phpExperience" value="phpScore">
+                PHP/Drupal
               </label>
             </div>
             <div>
               <label>
-                <input id="young" type="checkbox" name="ageRange" value="1">
-                I am 18-35 years old
+                <input id="javaExperience" type="checkbox" name="javaExperience" value="javaScore">
+                Java/Android
               </label>
             </div>
               <div>
                 <label>
-                  <input id="middleAge" type="checkbox" name="ageRange" value="2">
-                  I am 36-55 years old
+                  <input id="cssExperience" type="checkbox" name="cssExperience" value="cssScore">
+                  CSS/Design
                 </label>
               </div>
               <div>
                 <label>
-                  <input id="old" type="checkbox" name="ageRange" value="3">
-                  I am just old
+                  <input id="cSharpExperience" type="checkbox" name="cSharpExperience" value="cSharpScore">
+                  C#/.NET
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input id="htmlExperience" type="checkbox" name="htmlExperience" value="cssScore">
+                  HTML
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input id="javaScriptExperience" type="checkbox" name="javaScriptExperience" value="cssScore">
+                  JavaScript
+                </label>
+              </div>
+              <!-- <div>
+                <label>
+                  <input id="pythonExperience" type="checkbox" name="pythonExperience" value="">
+                  Python
+                </label>
+              </div> -->
+              <div>
+                <label>
+                  <input id="swiftExperience" type="checkbox" name="swiftExperience" value="cSharpScore">
+                  Swift/iOS
+                </label>
+              </div>
+              <div>
+                <label>
+                  <input id="sqlExperience" type="checkbox" name="sqlExperience" value="cssScore">
+                  JavaScript
                 </label>
               </div>
               <input type="submit" value="Submit">
             </form>
           </div>
+        </div>
+        <div class="frontEndPage">
+          <h1>You should probably take the CSS/Design track!</h1>
+          <p>But let's be sure...</p>
         </div>
       </div>
 
