@@ -10,11 +10,11 @@ $(document).ready(function() {
 
   $(".frontBackEndForm").submit(function(){
     event.preventDefault();
-    userName = $("#userName").val();
+    userName = $("input#userName").val();
     var isFrontChecked = $("#frontEndButton").is(':checked');
     var isBackChecked = $("#backEndButton").is(':checked');
-
-
+    console.log(userName)
+    $(".userNameSpan").text(userName);
     if (isFrontChecked === true) {
       cssScore = cssScore + 10;
       $(".introQuestions").hide(700);

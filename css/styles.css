@@ -2,8 +2,13 @@ html {
   background-color: #dae2ef;
 }
 
-.backEndQuestions, .frontEndPage, .languagesExperienceDiv, .howMuchExperienceDiv, .languagesDesireDiv {
+.container-fluid {
+  background-color: #dae2ef;
+}
+.backEndQuestions, .frontEndPage, .languagesExperienceDiv, .howMuchExperienceDiv, .languagesDesireDiv, .rubyWinDiv, .phpWinDiv, .javaWinDiv, .cssWinDiv, .cSharpWinDiv, .rubyWinDiv2nd, .phpWinDiv2nd, .javaWinDiv2nd, .cssWinDiv2nd, .cSharpWinDiv2nd {
   display: none;
+  background-color: #dae2ef;
+  width: 100%;
 }
 
 #introHeader, #frontOrBackEnd {
@@ -17,11 +22,10 @@ html {
 
 .frontEndPage p {
   font-size: 70px;
-  color: red;
-  background-color: black;
+
 }
 
-.introQuestions {
+.introQuestions, .languagesDesireDiv, .howMuchExperienceDiv, .frontEndPage, .languagesExperienceDiv {
   margin-top: 50%;
   position: absolute;
   top: 50%;
@@ -37,7 +41,7 @@ html {
   border: 1px dashed pink;
   color: white;
   text-align: center;
-  width: 100%;
+  width: 500px;
   height: 200px;
   font-size: 25px;
 }
