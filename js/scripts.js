@@ -1,9 +1,14 @@
 $(document).ready(function() {
   var score = 0; // global
-  var userName = ""; 
+  var userName = "";
 
-  $(".introQuestions").submit(function(){
-    event.prevent.Default();
+  $(".frontBackEndForm").submit(function(){
+    event.preventDefault();
+    userName = $("#userName").val();
+    $(".introQuestions").hide(700);
+    $(".backEndQuestions").show(1400);
+
+    console.log("user name is " + userName);
   });
 
   $(".formOne").submit(function() {
@@ -28,8 +33,6 @@ $(document).ready(function() {
       $(".carlSagan").show();
     } else if (score > 10) {
       $(".richardDawkins").show();
-    } else {
-      $(".pickSomething").show();
     }
   });
 });
