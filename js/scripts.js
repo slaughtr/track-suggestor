@@ -18,9 +18,16 @@ $(document).ready(function() {
     if (isFrontChecked === true) {
       cssScore = cssScore + 10;
       $(".introQuestions").hide(700);
-      $(".frontEndPage").slideDown(1400).delay(2000).slideUp(700, function(){
-        $(".backEndQuestions").show(1400);
+      $(".frontEndPage").slideDown(1500, function() {
+        $(".frontEndPage").slideUp(3000, function(){
+          $(".backEndQuestions").show();
+          $(".howMuchExperienceDiv").show(1400);
+        });
       });
+      // $(".backEndQuestions").show(1000);
+      // $(".howMuchExperienceDiv").show(1400, function(){
+      //   $(".frontEndPage").slideUp(1000);
+      // });
     } else if (isBackChecked === true) {
       rubyScore = rubyScore + 5;
       phpScore = phpScore + 5;
@@ -33,6 +40,8 @@ $(document).ready(function() {
       alert("Gotta pick one!");
       //fancy bit of code that makes stuff red or whatever
     }
+
+
   });
 
   $(".experienceHowMuchForm").submit(function() {
@@ -126,6 +135,23 @@ $(document).ready(function() {
       console.log("c#");
       $(".languagesDesireDiv").slideUp(777);
       $(".cSharpWinDiv").slideDown(666);
+    }
+
+    if (backupChoice.name === 'Ruby/Rails') {
+      console.log("ruby2nd");
+      $(".rubyWinDiv").slideDown(666);
+    } else if (backupChoice.name === 'PHP/Drupal') {
+      console.log("php2nd");
+      $(".phpWinDiv").slideDown(666);
+    } else if (backupChoice.name === 'Java/Android') {
+      console.log("java2nd");
+      $(".javaWinDiv").slideDown(666);
+    } else if (backupChoice.name === 'CSS/Design') {
+      console.log("css2nd");
+      $(".cssWinDiv2nd").slideDown(666);
+    } else if (backupChoice.name === 'C#/.NET') {
+      console.log("c#");
+      $(".cSharpWinDiv2nd").slideDown(666);
     }
   });
 });
