@@ -105,5 +105,27 @@ $(document).ready(function() {
     var backupChoice = finalScore[1];
 
     console.log(bestChoice.name + " is best: " + bestChoice.points + " " + backupChoice.name + " and backup: " + backupChoice.points);
+
+    if (bestChoice.name === 'Ruby/Rails') {
+      console.log("ruby");
+      $(".languagesDesireDiv").slideUp(777);
+      $(".rubyWinDiv").slideDown(666);
+    } else if (bestChoice.name === 'PHP/Drupal') {
+      console.log("php");
+      $(".languagesDesireDiv").slideUp(777);
+      $(".phpWinDiv").slideDown(666);
+    } else if (bestChoice.name === 'Java/Android') {
+      console.log("java");
+      $(".languagesDesireDiv").slideUp(777);
+      $(".javaWinDiv").slideDown(666);
+    } else if (bestChoice.name === 'CSS/Design') {
+      console.log("css");
+      $(".languagesDesireDiv").slideUp(777);
+      $(".cssWinDiv").slideDown(666);
+    } else if (bestChoice.name === 'C#/.NET') {
+      console.log("c#");
+      $(".languagesDesireDiv").slideUp(777);
+      $(".cSharpWinDiv").slideDown(666);
+    }
   });
 });
