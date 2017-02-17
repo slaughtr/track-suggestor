@@ -4,12 +4,32 @@ $(document).ready(function() {
 
   $(".frontBackEndForm").submit(function(){
     event.preventDefault();
-    userName = $("#userName").val();
+
+    var isFrontChecked = $("#frontEndButton").is(':checked');
+        var isBackChecked = $("#backEndButton").is(':checked');
+
+        console.log("front " + isFrontChecked);
+        console.log("back " + isBackChecked);
+
+  //   userName = $("#userName").val();
     $(".introQuestions").hide(700);
-    $(".backEndQuestions").show(1400);
+  
+    if (isFrontChecked === true) {
+      $(".frontEndPage").show(1400);
+    } else if (isBackChecked === true) {
+      $(".backEndQuestions").show(1400);
+  } else {
+      alert("Gotta pick something here dude");
+  }
 
     console.log("user name is " + userName);
   });
+
+//   $('frontOrBackEndButtonsRow button').click(function() {
+//     $(this).addClass('active').siblings().removeClass('active');
+//
+//
+// });
 
   $(".formOne").submit(function() {
     event.preventDefault();

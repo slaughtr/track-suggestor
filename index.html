@@ -9,7 +9,9 @@
 
     <div class="container">
       <div class="introQuestions">
+        <div class="row">
         <h1 id="introHeader">Let's find out about you</h1>
+      </div>
         <form class="frontBackEndForm">
         <div class="row">
           <div class="col-md-12" id="userNameHeaderRow">
@@ -22,36 +24,15 @@
           </div>
         </div>
         <div class="row frontOrBackEndButtonsRow">
-
-
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-            </label>
-          </div>
-
-
-<!--
           <h3 id="frontOrBackEnd">Do you fancy yourself an artist or a scientist?</h3>
           <div class="btn-group" data-toggle="buttons">
-          <div class="col-md-6">
-            <label class="btn btn-primary active" id="frontEndButton">
-              <input type="radio" name="frontEndRadio" id="frontEndRadio" autocomplete="off" checked>I like to make things pretty.
+            <label class="btn btn-primary active">
+              <input type="radio" name="options" id="frontEndButton" autocomplete="off" checked>I like to make things pretty.
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" id="backEndButton" autocomplete="off">I like to break things.
             </label>
           </div>
-          <div class="col-md-6">
-            <label class="btn btn-primary" id="backEndButton">
-              <input type="radio" name="backEndRadio" id="backEndRadio" autocomplete="off">I like to break things.
-            </label>
-          </div>
-        </div> -->
-      </div>
         <div class="row">
           <div class="col-md-12">
             <h3>Learning is hard. Are you 100% sure you're ready for this?</h3>
@@ -64,7 +45,8 @@
         </div>
         </form>
       </div>
-      <div class="row backEndQuestions"> <!-- hidden until user picks front/back end -->
+      <div class="row backEndQuestions">
+      <!-- hidden until user picks front/back end -->
         <h2>Select things that apply to you</h2>
         <div class="col-md-6">
           <form class="formOne">
@@ -119,11 +101,11 @@
               <input type="submit" value="Submit">
             </form>
           </div>
-
+        </div>
       </div>
-    </div>
 
     <script src='js/jquery-3.1.1.js'></script>
+    <script src='js/bootstrap.js'></script>
     <script src='js/scripts.js'></script>
   </body>
 </html>

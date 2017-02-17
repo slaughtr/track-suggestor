@@ -14,12 +14,14 @@ html {
   text-align: center;
   width: 100%;
 }
-/*.introQuestions {
-  position: absolute;
+
+
+.introQuestions {
+  position: relative;;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}*/
+}
 
 /*#frontEndButton, span#frontEndButton {
   display: inline-block;
