@@ -91,5 +91,19 @@ $(document).ready(function() {
         window[value] = window[value] + 7;
       }
     });
+
+    rubyFinal = {name: 'Ruby/Rails', points: rubyScore};
+    phpFinal = {name: 'PHP/Drupal'  ,points: phpScore };
+    javaFinal = {name: 'Java/Android'  ,points: javaScore };
+    cssFinal = {name: 'CSS/Design'  ,points: cssScore };
+    cSharpFinal = {name: 'C#/.NET'  ,points: cSharpScore };
+
+    var finalScore = [rubyFinal, phpFinal, javaFinal, cssFinal, cSharpFinal];
+    finalScore.sort(function(x, y) { return y.points - x.points; });
+
+    var bestChoice = finalScore[0];
+    var backupChoice = finalScore[1];
+
+    console.log(bestChoice.name + " is best: " + bestChoice.points + " " + backupChoice.name + " and backup: " + backupChoice.points);
   });
 });
