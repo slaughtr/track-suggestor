@@ -24,10 +24,6 @@ $(document).ready(function() {
           $(".howMuchExperienceDiv").show(1400);
         });
       });
-      // $(".backEndQuestions").show(1000);
-      // $(".howMuchExperienceDiv").show(1400, function(){
-      //   $(".frontEndPage").slideUp(1000);
-      // });
     } else if (isBackChecked === true) {
       rubyScore = rubyScore + 5;
       phpScore = phpScore + 5;
@@ -40,13 +36,10 @@ $(document).ready(function() {
       alert("Gotta pick one!");
       //fancy bit of code that makes stuff red or whatever
     }
-
-
   });
 
   $(".experienceHowMuchForm").submit(function() {
     event.preventDefault();
-
     var noIsChecked = $("#noExperience").is(':checked');
     var someIsChecked = $("#someExperience").is(':checked');
     var muchIsChecked = $("#muchExperience").is(':checked');
@@ -68,7 +61,6 @@ $(document).ready(function() {
 
   $(".whatLanguageExperience").submit(function() {
     event.preventDefault();
-
     var choices = ["rubyExperience", "phpExperience", "javaExperience", "cssExperience", "cSharpExperience", "htmlExperience", "javaScriptExperience", "swiftExperience", "sqlExperience"];
 
     choices.forEach(function(info) {
@@ -88,7 +80,6 @@ $(document).ready(function() {
 
   $(".whatLanguageDesire").submit(function() {
     event.preventDefault();
-
     var choices = ["rubyDesire", "phpDesire", "javaDesire", "cssDesire", "cSharpDesire", "htmlDesire", "javaScriptDesire"];
 
     choices.forEach(function(info) {
@@ -106,51 +97,37 @@ $(document).ready(function() {
     javaFinal = {name: 'Java/Android'  ,points: javaScore };
     cssFinal = {name: 'CSS/Design'  ,points: cssScore };
     cSharpFinal = {name: 'C#/.NET'  ,points: cSharpScore };
-
     var finalScore = [rubyFinal, phpFinal, javaFinal, cssFinal, cSharpFinal];
     finalScore.sort(function(x, y) { return y.points - x.points; });
-
     var bestChoice = finalScore[0];
     var backupChoice = finalScore[1];
 
-    console.log(bestChoice.name + " is best: " + bestChoice.points + " " + backupChoice.name + " and backup: " + backupChoice.points);
-
     if (bestChoice.name === 'Ruby/Rails') {
-      console.log("ruby");
       $(".languagesDesireDiv").slideUp(777);
       $(".rubyWinDiv").slideDown(666);
     } else if (bestChoice.name === 'PHP/Drupal') {
-      console.log("php");
       $(".languagesDesireDiv").slideUp(777);
       $(".phpWinDiv").slideDown(666);
     } else if (bestChoice.name === 'Java/Android') {
-      console.log("java");
       $(".languagesDesireDiv").slideUp(777);
       $(".javaWinDiv").slideDown(666);
     } else if (bestChoice.name === 'CSS/Design') {
-      console.log("css");
       $(".languagesDesireDiv").slideUp(777);
       $(".cssWinDiv").slideDown(666);
     } else if (bestChoice.name === 'C#/.NET') {
-      console.log("c#");
       $(".languagesDesireDiv").slideUp(777);
       $(".cSharpWinDiv").slideDown(666);
     }
 
     if (backupChoice.name === 'Ruby/Rails') {
-      console.log("ruby2nd");
       $(".rubyWinDiv2nd").slideDown(666);
     } else if (backupChoice.name === 'PHP/Drupal') {
-      console.log("php2nd");
       $(".phpWinDiv2nd").slideDown(666);
     } else if (backupChoice.name === 'Java/Android') {
-      console.log("java2nd");
       $(".javaWinDiv2nd").slideDown(666);
     } else if (backupChoice.name === 'CSS/Design') {
-      console.log("css2nd");
       $(".cssWinDiv2nd").slideDown(666);
     } else if (backupChoice.name === 'C#/.NET') {
-      console.log("c#");
       $(".cSharpWinDiv2nd").slideDown(666);
     }
   });
