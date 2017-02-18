@@ -27,10 +27,10 @@
           <h3 id="frontOrBackEnd">Do you fancy yourself an artist or a scientist?</h3>
           <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-primary active">
-              <input type="radio" name="options" id="frontEndButton" autocomplete="off" checked>I like to make things pretty.
+              <input type="radio" name="options" id="frontEndButton" autocomplete="off" checked>I like to make things pretty and easy to use.
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name="options" id="backEndButton" autocomplete="off">I like to break things.
+              <input type="radio" name="options" id="backEndButton" autocomplete="off">I like to break things, and then fix them.
             </label>
           </div>
         <div class="row">
@@ -184,6 +184,30 @@
             <input type="submit" name="submit" value="I want to learn these" id="submitLanguageDesire">
             </form>
           </div>
+
+        <div class="learnNewOrOld">
+          <form class="learnNewOrOldForm">
+            <!-- <div>
+              <label>
+                <input id="learnNewThings" type="radio" name="learnNewThings" value="learnNewThings">
+                I would rather learn new things than things I already know.
+              </label>
+            </div>
+            <div>
+              <label>
+                <input id="learnOldThings" type="radio" name="learnOldThings2" value="learnOldThings2">
+                I want to continue working on languages I'm already familiar with.
+              </label>
+            </div> -->
+            <select class="form-control" id="newOldDropDown">
+            <option>New</option>
+            <option>Old</option>
+            </select>
+            <input type="submit" name="submit" value="That's my preference, dude" id="submitNewOrOld">
+          </form>
+        </div>
+
+
         <div class="frontEndPage">
           <h1><span class="userNameSpan"></span>, <small>you should probably take the CSS/Design track.</small></h1>
           <p>But let's be sure...</p>

@@ -5,7 +5,7 @@ html {
 .container-fluid {
   background-color: #dae2ef;
 }
-.backEndQuestions, .frontEndPage, .languagesExperienceDiv, .howMuchExperienceDiv, .languagesDesireDiv, .rubyWinDiv, .phpWinDiv, .javaWinDiv, .cssWinDiv, .cSharpWinDiv, .rubyWinDiv2nd, .phpWinDiv2nd, .javaWinDiv2nd, .cssWinDiv2nd, .cSharpWinDiv2nd {
+.backEndQuestions, .frontEndPage, .languagesExperienceDiv, .howMuchExperienceDiv, .languagesDesireDiv, .rubyWinDiv, .phpWinDiv, .javaWinDiv, .cssWinDiv, .cSharpWinDiv, .rubyWinDiv2nd, .phpWinDiv2nd, .javaWinDiv2nd, .cssWinDiv2nd, .cSharpWinDiv2nd, .learnNewOrOld {
   display: none;
   background-color: #dae2ef;
   width: 100%;
@@ -30,7 +30,7 @@ a {
 
 }
 
-.introQuestions, .languagesDesireDiv, .howMuchExperienceDiv, .frontEndPage, .languagesExperienceDiv {
+.introQuestions, .languagesDesireDiv, .howMuchExperienceDiv, .frontEndPage, .languagesExperienceDiv, .learnNewOrOld {
   margin-top: 50%;
   position: absolute;
   top: 50%;

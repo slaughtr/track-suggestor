@@ -7,13 +7,13 @@ var cSharpScore = 0;
 $(document).ready(function() {
   var userName = "";
   var beginnerExperience = 0;
+  var reverseScore = 0;
 
   $(".frontBackEndForm").submit(function(){
     event.preventDefault();
     userName = $("input#userName").val();
     var isFrontChecked = $("#frontEndButton").is(':checked');
     var isBackChecked = $("#backEndButton").is(':checked');
-    console.log(userName)
     $(".userNameSpan").text(userName);
     if (isFrontChecked === true) {
       cssScore = cssScore + 10;
@@ -75,7 +75,18 @@ $(document).ready(function() {
       }
     });
     $(".languagesExperienceDiv").hide(1000);
-    $(".languagesDesireDiv").show(1000);
+    $(".learnNewOrOld").show(1000);
+  });
+
+  $(".learnNewOrOldForm").submit(function() {
+    event.preventDefault();
+    var oldIsChecked = $("#learnOldThings").val();
+    if (oldIsChecked === "Old") {
+      console.log("what");
+    }
+    console.log("ain't n=broken");
+    $(".learnNewOrOld").hide(1000);
+    $(".languagesDesireDiv").slideDown(1000);
   });
 
   $(".whatLanguageDesire").submit(function() {
@@ -98,7 +109,15 @@ $(document).ready(function() {
     cssFinal = {name: 'CSS/Design'  ,points: cssScore };
     cSharpFinal = {name: 'C#/.NET'  ,points: cSharpScore };
     var finalScore = [rubyFinal, phpFinal, javaFinal, cssFinal, cSharpFinal];
-    finalScore.sort(function(x, y) { return y.points - x.points; });
+
+
+    if (reverseScore === 1) {
+          finalScore.sort(function(x, y) { return y.points - x.points; });
+      finalScore.reverse();
+    } else {
+          finalScore.sort(function(x, y) { return y.points - x.points; });
+    }
+
     var bestChoice = finalScore[0];
     var backupChoice = finalScore[1];
 
