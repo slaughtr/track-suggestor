@@ -1,4 +1,4 @@
-var rubyScore = 0; //have to declare these out here for the window[] function to work
+ var rubyScore = 0; //have to declare these out here for the window[] function to work
 var phpScore = 0;
 var javaScore = 0;
 var cssScore = 0;
@@ -7,7 +7,7 @@ var cSharpScore = 0;
 $(document).ready(function() {
   var userName = "";
   var beginnerExperience = 0;
-  var reverseScore = 0;
+  var reverseScore = 0; // if the user wants to learn new or old things more, this variable changes their final outcome
 
   $(".frontBackEndForm").submit(function(){
     event.preventDefault();
@@ -34,7 +34,7 @@ $(document).ready(function() {
       $(".howMuchExperienceDiv").show(1400);
     } else {
       alert("Gotta pick one!");
-      //fancy bit of code that makes stuff red or whatever
+      //this part needs a fancy bit of code that makes stuff red or whatever
     }
   });
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
       $(".howMuchExperienceDiv").hide(1000);
       $(".languagesExperienceDiv").show(1000);
     } else {
-      alert("Gotta pick something!");
+      alert("Gotta pick something!"); //need better ways to alert user
     }
   });
 
@@ -65,11 +65,11 @@ $(document).ready(function() {
 
     choices.forEach(function(info) {
       var userAnswer = ("#" + info).toString();
-      var value = $(userAnswer).val();
+      var value = $(userAnswer).val(); //get the value= value from different inputs so we don't have to use a 30 line if/else check to find out which items they selected
       var isChecked = $(userAnswer).is(':checked');
 
       if ((isChecked === true) && beginnerExperience === 0) {
-        window[value] = window[value] - 5;
+        window[value] = window[value] - 5; //in this situation, value becomes rubyScore etc. crafty stuff!
       } else if ((isChecked ===true) && beginnerExperience === 1) {
         window[value] = window[value] - 2;
       }
@@ -82,9 +82,9 @@ $(document).ready(function() {
     event.preventDefault();
     var oldIsChecked = $("#learnOldThings").val();
     if (oldIsChecked === "Old") {
-      console.log("what");
+      reverseScore = 1;
     }
-    console.log("ain't n=broken");
+
     $(".learnNewOrOld").hide(1000);
     $(".languagesDesireDiv").slideDown(1000);
   });
