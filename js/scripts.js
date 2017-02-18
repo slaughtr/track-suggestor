@@ -139,13 +139,13 @@ $(document).ready(function() {
 
     if (backupChoice.name === 'Ruby/Rails') {
       console.log("ruby2nd");
-      $(".rubyWinDiv").slideDown(666);
+      $(".rubyWinDiv2nd").slideDown(666);
     } else if (backupChoice.name === 'PHP/Drupal') {
       console.log("php2nd");
-      $(".phpWinDiv").slideDown(666);
+      $(".phpWinDiv2nd").slideDown(666);
     } else if (backupChoice.name === 'Java/Android') {
       console.log("java2nd");
-      $(".javaWinDiv").slideDown(666);
+      $(".javaWinDiv2nd").slideDown(666);
     } else if (backupChoice.name === 'CSS/Design') {
       console.log("css2nd");
       $(".cssWinDiv2nd").slideDown(666);
